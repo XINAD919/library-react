@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import Hamburger from "./icons/Hamburger";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+  const id = router.query.id;
+
   return (
     <div className='md:w-11/12 md:mx-auto md:py-3'>
       <div className='md:flex hidden justify-between items-center'>
@@ -14,7 +18,22 @@ const Header = () => {
           </div>
         </div>
         <div className='flex gap-4'>
-          <Link className="bg-[#FF277E] rounded-md text-[#EEEE] px-4 py-3" href={`/books/new`}>Agregar nuevo libro</Link>
+          {router && router.pathname === "/books/[id]/edit" ? null : router &&
+            router.pathname === "/books/[id]" ? (
+            <Link
+              className='bg-[#FF277E] rounded-md text-[#EEEE] px-4 py-3'
+              href={`/books/${id}/edit`}
+            >
+              Editar libro
+            </Link>
+          ) : (
+            <Link
+              className='bg-[#FF277E] rounded-md text-[#EEEE] px-4 py-3'
+              href={`/books/new`}
+            >
+              Agregar nuevo libro
+            </Link>
+          )}
         </div>
       </div>
       <HeaderMovile />
