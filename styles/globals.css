@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bg-primary {
+  background-color: #0e0e10;
+}
+
+.bg-secondary {
+  background-color: #0F4C75;
+}
+
+.bg-tertiary {
+  background-color: #3282B8;
+}
+
+.bg-quaternary {
+  background-color: #FF277E;
+}
+
+.text-primary {
+  color: #0e0e10;
+}
+
+.text-secondary {
+  color: #0F4C75;
+}
+
+.text-tertiary {
+  color: #3282B8;
+}
+
+.text-quaternary {
+  color: #FF277E;
+}
+
+.border-button {
+  border: 1px solid #FF277E;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.border-button:hover {
+  background-color: #FF277E;
+  color: #0e0e10;
+}
+.border-button:hover img {
+  filter: invert(1) sepia(1) saturate(1) hue-rotate(180deg);
+}
+
+.nav-links .nav-item {
+  border-bottom: 0px transparent solid;
+  transition: border-bottom 0.2s ease;
+}
+.nav-links .nav-item:hover {
+  border-bottom: 1px #FF277E solid;
+}
+
+svg {
+  transition: stroke 0.2s ease;
+}
+svg path {
+  transition: stroke 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0e0e10;
+  }
+
+  h1,
+h2,
+h3 {
+    color: #FF277E;
+  }
+
+  span {
+    color: rgba(238, 238, 238, 0.9333333333);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+  }
+
+  h1,
+h2,
+h3 {
+    color: #FF277E;
+  }
+
+  span {
+    color: rgba(238, 238, 238, 0.9333333333);
+  }
+}
+.rounded-100 {
+  border-radius: 100%;
+}
+
+.font-12 {
+  font-size: 0.8125rem;
+}
+.font-13 {
+  font-size: 0.8125rem;
+}
+.font-14 {
+  font-size: 0.875rem;
+}
+.font-16 {
+  font-size: 1rem;
+}
+.font-17 {
+  font-size: 1.0625rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+}
+.font-20 {
+  font-size: 1.25rem;
+}
+.font-21 {
+  font-size: 1.3125rem;
+}
+.font-24 {
+  font-size: 1.5rem;
+}
+.font-28 {
+  font-size: 1.75rem;
+}
+.font-30 {
+  font-size: 1.875rem;
+}
+.font-32 {
+  font-size: 2rem;
+}
+.font-34 {
+  font-size: 2.125rem;
+}
+.font-35 {
+  font-size: 2.1875rem;
+}
+.font-36 {
+  font-size: 2.25rem;
+}
+.font-39 {
+  font-size: 2.4375rem;
+}
+.font-40 {
+  font-size: 2.5rem;
+}
+.font-42 {
+  font-size: 2.625rem;
+}
+.font-50 {
+  font-size: 3.125rem;
+}
+.font-55 {
+  font-size: 3.4375rem;
+}
+.font-64 {
+  font-size: 4rem;
+}
+.font-100 {
+  font-size: 6.25rem;
+}
+
+.switch-button .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch-button input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch-button .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.switch-button .slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.switch-button input:checked + .slider {
+  background-color: #0F4C75;
+}
+.switch-button input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.switch-button .slider.round {
+  border-radius: 34px;
+}
+.switch-button .slider.round::before {
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=globals.css.map */
