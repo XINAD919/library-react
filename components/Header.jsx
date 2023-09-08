@@ -13,14 +13,9 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        {/* <div className='flex gap-4'>
-          <Link href={`#${t("links.about")}`}>{t("aboutme")}</Link>
-          <Link href={`#${t("links.projects")}`}>{t("projects")}</Link>
-          <Link href={`#${t("links.skills")}`}>{t("skills")}</Link>
-          <Link href={`#${t("links.contact")}`}>{t("contact")}</Link>
-          <Link className='flex items-center' href='' locale={changeTo}>
-            
-        </div> */}
+        <div className='flex gap-4'>
+          <Link className="bg-[#FF277E] rounded-md text-[#EEEE] px-4 py-3" href={`/books/new`}>Agregar nuevo libro</Link>
+        </div>
       </div>
       <HeaderMovile />
     </div>
